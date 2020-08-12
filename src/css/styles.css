@@ -1,0 +1,9 @@
+.bio-pic__box {
+  width: 80%;
+  background-color: pink;
+}
+
+.bio-pic__image {
+  width: 50%;
+  height: 50%;
+}
