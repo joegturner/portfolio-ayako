@@ -2,7 +2,12 @@
 
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="src/css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="src/css/style.css" />
 
     <title>Christina's Portfolio</title>
   </head>
@@ -12,39 +17,104 @@
       <!--navbar-->
     </div>
 
-    <header>
+    <header class="header">
       <!--picture, intro, name, contact info-->
+      <div id="top"></div>
+      <div class="header__box">
+        <img
+          class="header__image"
+          src="src/images/bio-pic-5.png"
+          alt="Profile picture"
+        />
 
-      <div class="bio-pic">
-        <div class="bio-pic__box">
-          <img
-            class="bio-pic__image"
-            src="src/images/bio-pic-1.JPG"
-            alt="Profile picture"
-          />
+        <div class="header__text-box">
+          <div class="heading">
+            <h1 class="heading__main">Christina Turner</h1>
+            <h1 class="heading__sub">
+              Microbial Ecologist
+            </h1>
+          </div>
+        </div>
+      </div>
+      <div class="header__intro-box">
+        <div class="heading">
+          <h2 class="heading__intro">
+            Background in <strong>molecular biology</strong> and
+            <strong>microbial ecology</strong>
+          </h2>
+          <h2 class="heading__intro">
+            Currently researching <strong>bioinformatics</strong> and
+            <strong>computational biomedicine</strong>
+          </h2>
         </div>
       </div>
     </header>
 
-    <section>
-      <!--research interests-->
-    </section>
+    <main>
+      <section class="section-about">
+        <!--about me, research interests-->
 
-    <section>
-      <!--projects-->
-      <div>
-        <!--masters thesis-->
-      </div>
-    </section>
+        <div class="about">
+          <div class="about__text">
+            <p>
+              Introduction here.... I'm a biology researcher at OHSU. blah blah
+              blah blah. What you're doing, studying. Maybe write about your
+              values or core beliefs. Why you do what you do? Lorem ipsum dolor
+              sit amet consectetur adipisicing elit. Ipsa ad reprehenderit,
+              doloribus nihil ullam, culpa voluptates ipsum tempora,
+              consequuntur eligendi quia et nulla ea facilis iure numquam
+              suscipit? Numquam, doloremque.
+            </p>
+          </div>
+          <div class="about__research">
+            <h3 class="section-title section-title--sub">Research Interests</h3>
+            <ul>
+              <li>poo</li>
+              <li>microbial things</li>
+              <li>computer stuff</li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-    <section>
-      <!--Work experience, academic, awards, publications-->
-    </section>
+      <section class="section-projects">
+        <!--projects-->
+        <h2 class="section-title section-title--main">
+          Projects
+        </h2>
+        <div class="projects">
+          <!--masters thesis-->
+          <div class="row">
+            <div class="col-1-of-3">
+              <div class="card">
+                <h3 class="card__title">project 1</h3>
+              </div>
+            </div>
+            <div class="col-1-of-3">
+              <div class="card">
+                <h3 class="card__title">project 2</h3>
+              </div>
+            </div>
+            <div class="col-1-of-3">
+              <div class="card">
+                <h3 class="card__title">project 3</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-    <section></section>
+      <section class="section-experience">
+        <!--Work experience, academic, awards, publications-->
+        <h3 class="section-title section-title--sub">Work Experience</h3>
+        <h3 class="section-title section-title--sub">Education</h3>
+        <h3 class="section-title section-title--sub">Awards</h3>
+        <h3 class="section-title section-title--sub">Publications</h3>
+      </section>
 
-    <footer>
-      <!--newbranch FOOTER?-->
-    </footer>
+      <section></section>
+    </main>
+
+    <footer></footer>
   </body>
 </html>
