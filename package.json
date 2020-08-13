@@ -1,0 +1,22 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Christina's portfolio",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass src/sass/main.scss src/css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joegturner/portfolio-ayako.git"
+  },
+  "author": "jgturner",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joegturner/portfolio-ayako/issues"
+  },
+  "homepage": "https://github.com/joegturner/portfolio-ayako#readme",
+  "dependencies": {
+    "node-sass": "^4.14.1"
+  }
+}

@@ -1,0 +1,181 @@
+/*
+  0 - 600px:      Phone
+  600 - 900px:    Tablet portrait mode
+  900 - 1200px:   Tablet landscape mode
+  (1200 - 1800px:  Normal styles applied)
+  1800px + :      Big desktop
+  
+  $breakpoint argument choices:
+  - phone
+  - tab-port
+  - tab-land
+  - desktop
+  - big-desktop
+  - iphone X
+  
+  ORDER: base + typography > general layout + grid > page layout > components
+  
+  1em = 16px
+  */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 37.5em) {
+    html {
+      font-size: 43.75%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+
+body {
+  box-sizing: border-box;
+  background-color: grey; }
+  @media (max-width: 56.25em) {
+    body {
+      padding: 0; } }
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: #24272b; }
+
+.heading {
+  color: #fff;
+  text-shadow: 1px 1px 1px rgba(36, 39, 43, 0.5); }
+  .heading__main {
+    font-size: 7rem;
+    letter-spacing: 1rem;
+    font-weight: 500; }
+  .heading__sub {
+    font-size: 5rem;
+    margin-bottom: 6rem;
+    letter-spacing: 0.5rem;
+    font-weight: 500; }
+  .heading__intro {
+    font-size: 3rem;
+    font-weight: 300;
+    margin: 1rem 0; }
+
+.section-title {
+  color: #24272b;
+  text-align: center; }
+  .section-title--main {
+    font-size: 4rem; }
+  .section-title--sub {
+    font-size: 3rem; }
+
+.about {
+  padding: 5rem 1rem; }
+  .about__text {
+    width: 70%;
+    margin: auto;
+    font-size: 2rem; }
+  .about__research {
+    text-align: center;
+    width: 50%;
+    margin: 5rem auto; }
+    .about__research > ul {
+      list-style-type: none; }
+
+.card {
+  background-color: pink;
+  height: 30rem; }
+
+.row {
+  max-width: 114rem;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+    @media (max-width: 56.25em) {
+      .row:not(:last-child) {
+        margin-bottom: 3rem; } }
+  @media (max-width: 56.25em) {
+    .row {
+      max-width: 50rem;
+      padding: 0 3rem; } }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row [class^="col-"] {
+    float: left; }
+    @media (max-width: 56.25em) {
+      .row [class^="col-"] {
+        margin-bottom: 5rem;
+        width: 100% !important; } }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 6rem; }
+      @media (max-width: 56.25em) {
+        .row [class^="col-"]:not(:last-child) {
+          margin-right: 0; } }
+  .row .col-1-of-2 {
+    width: calc((100% - 6rem) / 2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 2 * 6rem) / 3); }
+  .row .col-2-of-3 {
+    width: calc( 2 * ((100% - 2 * 6rem) / 3) + 6rem); }
+  .row .col-1-of-4 {
+    width: calc((100% - 3 * 6rem) / 4); }
+  .row .col-2-of-4 {
+    width: calc( 2 * ((100% - 3 * 6rem) / 4) + 6rem); }
+  .row .col-3-of-4 {
+    width: calc( 3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem); }
+
+.header {
+  height: 95vh;
+  width: 100%;
+  padding: 5rem;
+  background-size: cover;
+  background-image: linear-gradient(to right bottom, rgba(199, 211, 226, 0.8), rgba(36, 39, 43, 0.8)), url(../images/bgpic-microscope.jpg); }
+  .header__box {
+    position: absolute;
+    width: 100%;
+    top: 10rem;
+    left: 5rem; }
+  .header__image {
+    position: relative;
+    float: left;
+    width: 25%;
+    margin-left: 3rem;
+    border-radius: 50%;
+    box-shadow: 0 1rem 4rem rgba(36, 39, 43, 0.6); }
+  .header__text-box {
+    position: relative;
+    float: left;
+    width: 70%;
+    padding: 5rem 1rem 0 3rem; }
+  .header__intro-box {
+    position: absolute;
+    width: 100%;
+    bottom: 15rem;
+    left: 10rem; }
+
+.section-about {
+  height: 100vh;
+  background-color: #fff;
+  padding: 5rem 1rem; }
+
+.section-projects {
+  min-height: 100vh;
+  background-color: #f7f7f7;
+  padding: 5rem 1rem; }
+
+.section-experience {
+  height: 100vh;
+  background-color: #fff;
+  padding: 5rem 1rem; }

@@ -1,0 +1,44 @@
+.header {
+  height: 95vh;
+  width: 100%;
+
+  padding: 5rem;
+  background-size: cover;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-grey, 0.8),
+      rgba($color-black, 0.8)
+    ),
+    url(../images/bgpic-microscope.jpg);
+
+  &__box {
+    position: absolute;
+    width: 100%;
+    top: 10rem;
+    left: 5rem;
+  }
+
+  &__image {
+    position: relative;
+    float: left;
+
+    width: 25%;
+    margin-left: 3rem;
+    border-radius: 50%;
+    box-shadow: 0 1rem 4rem rgba($color-black, 0.6);
+  }
+
+  &__text-box {
+    position: relative;
+    float: left;
+    width: 70%;
+    padding: 5rem 1rem 0 3rem;
+  }
+
+  &__intro-box {
+    position: absolute;
+    width: 100%;
+    bottom: 15rem;
+    left: 10rem;
+  }
+}
