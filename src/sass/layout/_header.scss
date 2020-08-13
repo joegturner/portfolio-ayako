@@ -4,6 +4,7 @@
 
   padding: 5rem;
   background-size: cover;
+  background-position: center;
   background-image: linear-gradient(
       to right bottom,
       rgba($color-grey, 0.8),
@@ -12,33 +13,72 @@
     url(../images/bgpic-microscope.jpg);
 
   &__box {
-    position: absolute;
-    width: 100%;
-    top: 10rem;
-    left: 5rem;
+    // position: absolute;
+    // width: 100%;
+    // top: 10rem;
+    // left: 5rem;
   }
 
   &__image {
-    position: relative;
-    float: left;
+    position: absolute;
+    top: 15rem;
+    left: 5rem;
 
     width: 25%;
     margin-left: 3rem;
     border-radius: 50%;
     box-shadow: 0 1rem 4rem rgba($color-black, 0.6);
+
+    @include respond(tab-port) {
+      width: 30%;
+      top: 25rem;
+      left: 3rem;
+    }
   }
 
-  &__text-box {
-    position: relative;
-    float: left;
-    width: 70%;
-    padding: 5rem 1rem 0 3rem;
+  &__text-main {
+    position: absolute;
+    top: 15rem;
+    left: 45rem;
+    padding: 1rem;
+    @include respond(tab-port) {
+      top: 15rem;
+      left: 5rem;
+    }
+
+    @include respond(phone) {
+      top: 15rem;
+      left: 50%;
+      width: 100%;
+      text-align: center;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__text-sub {
+    position: absolute;
+    top: 30rem;
+    left: 50rem;
+    padding: 1rem;
+    @include respond(tab-port) {
+      top: 27rem;
+      left: 33rem;
+    }
+
+    @include respond(phone) {
+      left: 25rem;
+    }
   }
 
   &__intro-box {
     position: absolute;
     width: 100%;
-    bottom: 15rem;
+    bottom: 10rem;
     left: 10rem;
+
+    @include respond(tab-port) {
+      width: 60%;
+      bottom: 5rem;
+    }
   }
 }

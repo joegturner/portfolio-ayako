@@ -61,15 +61,24 @@ body {
     font-size: 7rem;
     letter-spacing: 1rem;
     font-weight: 500; }
+    @media (max-width: 56.25em) {
+      .heading__main {
+        font-size: 6rem; } }
   .heading__sub {
     font-size: 5rem;
     margin-bottom: 6rem;
     letter-spacing: 0.5rem;
     font-weight: 500; }
+    @media (max-width: 56.25em) {
+      .heading__sub {
+        font-size: 4rem; } }
   .heading__intro {
     font-size: 3rem;
     font-weight: 300;
     margin: 1rem 0; }
+    @media (max-width: 56.25em) {
+      .heading__intro {
+        font-size: 2.5rem; } }
 
 .section-title {
   color: #24272b;
@@ -141,29 +150,58 @@ body {
   width: 100%;
   padding: 5rem;
   background-size: cover;
+  background-position: center;
   background-image: linear-gradient(to right bottom, rgba(199, 211, 226, 0.8), rgba(36, 39, 43, 0.8)), url(../images/bgpic-microscope.jpg); }
-  .header__box {
-    position: absolute;
-    width: 100%;
-    top: 10rem;
-    left: 5rem; }
   .header__image {
-    position: relative;
-    float: left;
+    position: absolute;
+    top: 15rem;
+    left: 5rem;
     width: 25%;
     margin-left: 3rem;
     border-radius: 50%;
     box-shadow: 0 1rem 4rem rgba(36, 39, 43, 0.6); }
-  .header__text-box {
-    position: relative;
-    float: left;
-    width: 70%;
-    padding: 5rem 1rem 0 3rem; }
+    @media (max-width: 56.25em) {
+      .header__image {
+        width: 30%;
+        top: 25rem;
+        left: 3rem; } }
+  .header__text-main {
+    position: absolute;
+    top: 15rem;
+    left: 45rem;
+    padding: 1rem; }
+    @media (max-width: 56.25em) {
+      .header__text-main {
+        top: 15rem;
+        left: 5rem; } }
+    @media (max-width: 37.5em) {
+      .header__text-main {
+        top: 15rem;
+        left: 50%;
+        width: 100%;
+        text-align: center;
+        transform: translateX(-50%); } }
+  .header__text-sub {
+    position: absolute;
+    top: 30rem;
+    left: 50rem;
+    padding: 1rem; }
+    @media (max-width: 56.25em) {
+      .header__text-sub {
+        top: 27rem;
+        left: 33rem; } }
+    @media (max-width: 37.5em) {
+      .header__text-sub {
+        left: 25rem; } }
   .header__intro-box {
     position: absolute;
     width: 100%;
-    bottom: 15rem;
+    bottom: 10rem;
     left: 10rem; }
+    @media (max-width: 56.25em) {
+      .header__intro-box {
+        width: 60%;
+        bottom: 5rem; } }
 
 .section-about {
   height: 100vh;
