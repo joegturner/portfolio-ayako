@@ -1,10 +1,10 @@
 .header {
-  height: 95vh;
+  height: 100vh;
   width: 100%;
 
   padding: 5rem;
   background-size: cover;
-  background-position: center;
+  background-position: 40%;
   background-image: linear-gradient(
       to right bottom,
       rgba($color-grey, 0.8),
@@ -13,72 +13,68 @@
     url(../images/bgpic-microscope.jpg);
 
   &__box {
-    // position: absolute;
-    // width: 100%;
-    // top: 10rem;
-    // left: 5rem;
+    position: absolute;
+    width: 100%;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 2rem;
+
+    &--main {
+      position: relative;
+      padding: 1rem;
+    }
+
+    &--sub {
+      position: relative;
+      padding: 1rem;
+    }
   }
 
   &__image {
-    position: absolute;
-    top: 15rem;
-    left: 5rem;
+    position: relative;
+    float: left;
+    width: 40%;
 
-    width: 25%;
-    margin-left: 3rem;
     border-radius: 50%;
     box-shadow: 0 1rem 4rem rgba($color-black, 0.6);
+    box-sizing: border-box;
 
-    @include respond(tab-port) {
-      width: 30%;
-      top: 25rem;
-      left: 3rem;
+    @include respond(phone) {
+      width: 25rem;
     }
   }
 
-  &__text-main {
-    position: absolute;
-    top: 15rem;
-    left: 45rem;
-    padding: 1rem;
-    @include respond(tab-port) {
-      top: 15rem;
-      left: 5rem;
-    }
+  &__title {
+    position: relative;
+    float: left;
+    width: 60%;
+    padding: 1rem 1rem 1rem 3rem;
 
     @include respond(phone) {
-      top: 15rem;
-      left: 50%;
-      width: 100%;
-      text-align: center;
-      transform: translateX(-50%);
-    }
-  }
-
-  &__text-sub {
-    position: absolute;
-    top: 30rem;
-    left: 50rem;
-    padding: 1rem;
-    @include respond(tab-port) {
-      top: 27rem;
-      left: 33rem;
-    }
-
-    @include respond(phone) {
-      left: 25rem;
+      width: 50rem;
     }
   }
 
   &__intro-box {
     position: absolute;
+    top: 70%;
+    left: 50%;
     width: 100%;
-    bottom: 10rem;
-    left: 10rem;
+    transform: translateX(-50%);
+    padding: 2rem;
+  }
 
-    @include respond(tab-port) {
-      width: 60%;
-      bottom: 5rem;
-    }
+  &__scroll-icon-box {
+    position: absolute;
+    top: 92%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__scroll-icon {
+    width: 5rem;
+
+    animation: bounce 2s infinite;
   }
 }

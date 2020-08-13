@@ -2,6 +2,7 @@
 
 <html lang="en">
   <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link
       href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
       rel="stylesheet"
@@ -13,28 +14,81 @@
   </head>
 
   <body>
-    <div>
-      <!--navbar-->
+    <input type="checkbox" class="nav__checkbox" id="nav-toggle" />
+    <label for="nav-toggle" class="nav__button">
+      <span class="nav__icon">&nbsp;</span>
+    </label>
+
+    <div class="nav-mobile">
+      <ul class="nav-mobile__links">
+        <a href="#top" class="nav-mobile__link btn-link nav-target">
+          <span class="nav-target">Top</span>
+        </a>
+        <a href="#projects" class="nav-mobile__link btn-link nav-target">
+          <span class="nav-target">Projects</span></a
+        >
+        <a href="#skills" class="nav-mobile__link btn-link nav-target">
+          <span class="nav-target">Skills</span></a
+        >
+        <a href="#about" class="nav-mobile__link btn-link nav-target">
+          <span class="nav-target">About</span></a
+        >
+        <a href="#contact" class="nav-mobile__link btn-link nav-target">
+          <span class="nav-target">Contact</span></a
+        >
+      </ul>
+    </div>
+
+    <div class="nav">
+      <div class="nav__left">
+        <a href="">
+          <img src="src/images/icons/logo.png" alt="Logo" class="nav__logo" />
+        </a>
+      </div>
+
+      <div class="nav__right">
+        <ul class="nav__links">
+          <a href="#top" class="nav__link btn-link nav-target">
+            <span class="nav-target">Top</span>
+          </a>
+          <a href="#projects" class="nav__link btn-link nav-target">
+            <span class="nav-target">Projects</span></a
+          >
+          <a href="#skills" class="nav__link btn-link nav-target">
+            <span class="nav-target">Skills</span></a
+          >
+          <a href="#about" class="nav__link btn-link nav-target">
+            <span class="nav-target">About</span></a
+          >
+          <a href="#contact" class="nav__link btn-link nav-target">
+            <span class="nav-target">Contact</span></a
+          >
+        </ul>
+      </div>
     </div>
 
     <header class="header">
       <!--picture, intro, name, contact info-->
       <div id="top"></div>
       <div class="header__box">
-        <img
-          class="header__image"
-          src="src/images/bio-pic-5.png"
-          alt="Profile picture"
-        />
-        <div class="header__text-main">
+        <div class="header__box--main">
           <h1 class="heading heading__main">Christina Turner</h1>
         </div>
-        <div class="header__text-sub">
-          <h1 class="heading heading__sub">
-            Microbial Ecologist
-          </h1>
+        <div class="header__box--sub">
+          <img
+            class="header__image"
+            src="src/images/bio-pic-5.png"
+            alt="Profile picture"
+          />
+
+          <div class="header__title">
+            <h1 class="heading heading__sub">
+              Microbial Ecologist
+            </h1>
+          </div>
         </div>
       </div>
+
       <div class="header__intro-box">
         <div class="heading">
           <h2 class="heading__intro">
@@ -55,7 +109,7 @@
 
         <div class="about">
           <div class="about__text">
-            <p>
+            <p class="text-small">
               Introduction here.... I'm a biology researcher at OHSU. blah blah
               blah blah. What you're doing, studying. Maybe write about your
               values or core beliefs. Why you do what you do? Lorem ipsum dolor
@@ -68,10 +122,18 @@
           <div class="about__research">
             <h3 class="section-title section-title--sub">Research Interests</h3>
             <ul>
-              <li>poo</li>
-              <li>microbial things</li>
-              <li>computer stuff</li>
+              <li class="text-medium">bioinformatics</li>
+              <li class="text-medium">computational biomedicine</li>
+              <li class="text-medium">molecular biology</li>
+              <li class="text-medium">microbial ecology</li>
             </ul>
+          </div>
+          <div class="header__scroll-icon-box">
+            <img
+              class="header__scroll-icon"
+              src="src/images/icons/scroll-down-icon.png"
+              alt="Scroll Down"
+            />
           </div>
         </div>
       </section>
@@ -114,6 +176,8 @@
       <section></section>
     </main>
 
-    <footer></footer>
+    <footer class="footer"></footer>
   </body>
+  <script type="module" src="src/js/polyfill.js"></script>
+  <script type="module" src="src/js/index.js"></script>
 </html>

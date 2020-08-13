@@ -1,0 +1,182 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  height: 6.5rem;
+  width: 100%;
+  background-color: rgba($color-black, 0.6);
+
+  padding: 0.3rem;
+  transition: all 0.3s ease;
+
+  @include respond(tab-land) {
+    height: 7rem;
+  }
+
+  &__left {
+    padding: 0.1rem 2rem;
+    float: left;
+    width: 27%;
+    text-align: left;
+
+    @include respond(tab-land) {
+      width: 15%;
+      padding: 0.1rem 0.8rem;
+    }
+  }
+
+  &__logo {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4.5rem;
+  }
+
+  &__right {
+    padding: 0.1rem 0.1rem;
+    float: right;
+    width: 35%;
+    text-align: right;
+
+    @include respond(tab-land) {
+      width: auto;
+      position: absolute;
+      top: 30%;
+      right: 5%;
+    }
+  }
+
+  &__links {
+    display: none;
+
+    @include respond(tab-land) {
+      display: inline-block;
+    }
+  }
+
+  &__link {
+    position: relative;
+    display: inline-block;
+    color: $color-white;
+    margin: 0 1rem;
+    text-decoration: none;
+    padding: 0.1rem 0.4rem;
+
+    @include respond(tab-land) {
+      display: inline-block;
+    }
+  }
+
+  // for mobile screens
+
+  &__button {
+    position: fixed;
+    top: 0;
+    right: 4rem;
+    z-index: 2500;
+    display: inline-block;
+
+    width: 4rem;
+    height: 4rem;
+    margin: 0 auto;
+    background-color: $color-white;
+    border-radius: 50%;
+    transform: translateY(1.3rem);
+
+    box-shadow: 0 1rem 3rem rgba($color-black, 0.1);
+    text-align: center;
+    cursor: pointer;
+
+    @include respond(tab-land) {
+      display: none;
+    }
+  }
+
+  // FUNCTIONALITY (for mobile)
+  &__checkbox {
+    display: none;
+  }
+  &__icon {
+    position: relative;
+
+    margin-top: 1.8rem;
+
+    &,
+    &::before,
+    &::after {
+      width: 2.5rem;
+      height: 2px;
+      background-color: $color-grey-dark;
+      display: inline-block;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: all 0.2s;
+    }
+
+    &::before {
+      top: -0.8rem;
+    }
+
+    &::after {
+      top: 0.8rem;
+    }
+  }
+
+  &__button:hover &__icon::before {
+    top: -1rem;
+  }
+  &__button:hover &__icon::after {
+    top: 1rem;
+  }
+
+  &__checkbox:checked + &__button &__icon {
+    background-color: transparent;
+  }
+
+  &__checkbox:checked + &__button &__icon::before {
+    top: 0;
+    transform: rotate(135deg);
+  }
+
+  &__checkbox:checked + &__button &__icon::after {
+    top: 0;
+    transform: rotate(-135deg);
+  }
+
+  &-mobile {
+    position: fixed;
+    top: 6.5rem;
+    right: 1rem;
+
+    z-index: 2000;
+    opacity: 0;
+    width: 0;
+    background-color: $color-grey-dark;
+    transition: all 0.8s;
+  }
+
+  &-mobile__links {
+    text-align: center;
+  }
+
+  &-mobile__link {
+    position: relative;
+    display: block;
+    font-size: 2rem;
+    z-index: 2100;
+    color: $color-grey-light;
+    text-decoration: none;
+    margin: 1rem;
+  }
+
+  &__checkbox:checked ~ &-mobile {
+    opacity: 0.6;
+    width: 10rem;
+  }
+}

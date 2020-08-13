@@ -2,42 +2,32 @@ body {
   font-family: "Lato", sans-serif;
   font-weight: 300;
   font-size: 1.6rem;
-  line-height: 1.7;
+  line-height: 1.5;
   color: $color-grey-dark;
 }
 
 .heading {
   color: $color-white;
 
-  text-shadow: 1px 1px 1px rgba($color-black, 0.5);
+  text-shadow: 1px 1px 1px rgba($color-black, 0.9);
 
   &__main {
-    font-size: 7rem;
+    font-size: 6rem;
     letter-spacing: 1rem;
     font-weight: 500;
-
-    @include respond(tab-port) {
-      font-size: 6rem;
-    }
   }
 
   &__sub {
-    font-size: 5rem;
-    margin-bottom: 6rem;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
     letter-spacing: 0.5rem;
-    font-weight: 500;
-    @include respond(tab-port) {
-      font-size: 4rem;
-    }
+    font-weight: 300;
   }
 
   &__intro {
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 300;
-    margin: 1rem 0;
-    @include respond(tab-port) {
-      font-size: 2.5rem;
-    }
+    margin: 1rem 1rem 2rem 1rem;
   }
 }
 
@@ -46,10 +36,20 @@ body {
   text-align: center;
 
   &--main {
-    font-size: 4rem;
+    font-size: 5rem;
   }
 
   &--sub {
     font-size: 3rem;
   }
+}
+
+.text-small {
+  font-size: 1.8rem;
+}
+.text-medium {
+  font-size: 2.5rem;
+}
+.text-large {
+  font-size: 4rem;
 }
