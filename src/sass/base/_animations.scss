@@ -93,6 +93,28 @@
   }
 }
 
+@keyframes moveBackground {
+  0% {
+    background-position-x: 0%;
+  }
+
+  // 25% {
+  //   background-position-x: 50%;
+  // }
+
+  50% {
+    background-position-x: 100%;
+  }
+
+  // 75% {
+  //   background-position-x: 50%;
+  // }
+
+  100% {
+    background-position-x: 0%;
+  }
+}
+
 @keyframes growNav {
   0% {
     clip-path: polygon(
