@@ -1,4 +1,4 @@
-.section-about {
+.section-research {
   height: 100vh;
   background-color: $color-white;
   padding: 5rem 1rem;
@@ -13,12 +13,27 @@
 .section-experience {
   height: 100vh;
   padding: 5rem 1rem;
-  background-size: cover;
-  background-position: 40%;
-  background-image: linear-gradient(
-      to right bottom,
-      rgba($color-grey, 0.8),
-      rgba($color-black, 0.8)
-    ),
-    url(../images/bgpic-microscope.jpg);
+  background-color: $color-white;
+
+  // background-image: url(../images/bgpic-oregon-1.jpg);
+  // background-size: cover;
+
+  // animation: moveBackground 60s infinite 1s;
+}
+
+.section-about {
+  height: 100vh;
+  background-color: $color-grey-light;
+  padding: 5rem 0;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+.section-contact {
+  min-height: 100vh;
+  background-color: $color-white;
+  padding: 5rem 1rem;
 }

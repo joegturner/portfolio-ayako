@@ -165,20 +165,54 @@ body {
   font-size: 4rem; }
 
 .about {
-  padding: 5rem 1rem; }
+  width: 90%;
+  padding: 1rem;
+  margin: 5rem 0; }
   .about__text {
-    width: 90%;
-    margin: auto; }
-  .about__research {
-    text-align: center;
-    width: 100%;
-    margin: 8rem auto; }
-    .about__research > ul {
-      list-style-type: none; }
+    font-size: 2rem; }
 
 .card {
   background-color: pink;
   height: 30rem; }
+
+.contact__text {
+  font-size: 2rem;
+  margin: 2rem 5rem; }
+
+.interests {
+  width: 100%;
+  height: 40rem;
+  background-image: url(../images/bgpic-oregon-1.jpg);
+  background-size: cover;
+  animation: moveBackground 60s infinite 1s; }
+  .interests__box {
+    width: 30rem;
+    margin: 1rem auto;
+    padding: 1rem;
+    font-weight: 400;
+    background-color: rgba(36, 39, 43, 0.6);
+    box-shadow: 0 1rem 4rem #24272b;
+    color: #fff;
+    text-align: center; }
+  .interests__title {
+    font-size: 2.4rem; }
+  .interests__list {
+    list-style-type: none; }
+  .interests__list-item {
+    font-size: 1.8rem;
+    margin: 1rem; }
+
+.research {
+  padding: 5rem 1rem; }
+  .research__text {
+    width: 90%;
+    margin: auto; }
+  .research__list {
+    text-align: center;
+    width: 100%;
+    margin: 8rem auto; }
+    .research__list > ul {
+      list-style-type: none; }
 
 .footer {
   height: 5rem;
@@ -223,9 +257,9 @@ body {
   height: 100vh;
   width: 100%;
   padding: 5rem;
-  background-image: url(../images/bgpic-oregon-1.jpg);
   background-size: cover;
-  animation: moveBackground 60s infinite 1s; }
+  background-position: 40%;
+  background-image: linear-gradient(to right bottom, rgba(199, 211, 226, 0.8), rgba(36, 39, 43, 0.8)), url(../images/bgpic-microscope.jpg); }
   .header__box {
     position: absolute;
     width: 100%;
@@ -398,7 +432,7 @@ body {
     opacity: 0.6;
     width: 10rem; }
 
-.section-about {
+.section-research {
   height: 100vh;
   background-color: #fff;
   padding: 5rem 1rem; }
@@ -411,6 +445,17 @@ body {
 .section-experience {
   height: 100vh;
   padding: 5rem 1rem;
-  background-size: cover;
-  background-position: 40%;
-  background-image: linear-gradient(to right bottom, rgba(199, 211, 226, 0.8), rgba(36, 39, 43, 0.8)), url(../images/bgpic-microscope.jpg); }
+  background-color: #fff; }
+
+.section-about {
+  height: 100vh;
+  background-color: #f7f7f7;
+  padding: 5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.section-contact {
+  min-height: 100vh;
+  background-color: #fff;
+  padding: 5rem 1rem; }

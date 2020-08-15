@@ -4,10 +4,14 @@
 
   padding: 5rem;
 
-  background-image: url(../images/bgpic-oregon-1.jpg);
   background-size: cover;
-
-  animation: moveBackground 60s infinite 1s;
+  background-position: 40%;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-grey, 0.8),
+      rgba($color-black, 0.8)
+    ),
+    url(../images/bgpic-microscope.jpg);
 
   &__box {
     position: absolute;

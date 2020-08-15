@@ -1,19 +1,8 @@
 .about {
-  padding: 5rem 1rem;
-
+  width: 90%;
+  padding: 1rem;
+  margin: 5rem 0;
   &__text {
-    width: 90%;
-    margin: auto;
-  }
-
-  &__research {
-    text-align: center;
-
-    width: 100%;
-    margin: 8rem auto;
-
-    & > ul {
-      list-style-type: none;
-    }
+    font-size: 2rem;
   }
 }

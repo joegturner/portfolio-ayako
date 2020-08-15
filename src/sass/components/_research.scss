@@ -1,0 +1,19 @@
+.research {
+  padding: 5rem 1rem;
+
+  &__text {
+    width: 90%;
+    margin: auto;
+  }
+
+  &__list {
+    text-align: center;
+
+    width: 100%;
+    margin: 8rem auto;
+
+    & > ul {
+      list-style-type: none;
+    }
+  }
+}
